@@ -2,6 +2,10 @@
 
 Quick memo creation for self-hosted [Memos](https://usememos.com) via Alfred.
 
+## Download
+
+[Download latest release](https://github.com/shensquared/alfred-memos-workflow/releases/latest)
+
 ## Usage
 
 ```
@@ -10,10 +14,10 @@ m your memo text here
 
 ## Installation
 
-1. Copy this workflow folder to `~/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows/`
-2. Open Alfred Preferences → Workflows → Memos
-3. Set `MEMOS_TOKEN` in the workflow configuration (get from Memos Settings → Access Tokens)
-4. Set `MEMOS_URL` to your Memos instance URL
+1. Download and double-click `Memos.alfredworkflow` to install
+2. Configure the workflow variables:
+   - `MEMOS_TOKEN` - Access token from Memos Settings
+   - `MEMOS_URL` - Your Memos instance URL
 
 ## Configuration
 
