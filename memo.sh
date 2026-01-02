@@ -18,14 +18,14 @@ if [[ -z "$content" ]]; then
     exit 1
 fi
 
-# Escape content for JSON
-json_content=$(printf '%s' "$content" | python3 -c 'import sys,json; print(json.dumps(sys.stdin.read()))')
+# Escape quotes and backslashes for JSON
+escaped=$(printf '%s' "$content" | sed 's/\\/\\\\/g; s/"/\\"/g')
 
 response=$(curl -s -w "\n%{http_code}" \
     -X POST "${MEMOS_URL}/api/v1/memos" \
     -H "Authorization: Bearer $MEMOS_TOKEN" \
     -H "Content-Type: application/json" \
-    -d "{\"content\": $json_content, \"visibility\": \"PRIVATE\"}")
+    -d "{\"content\": \"$escaped\", \"visibility\": \"PRIVATE\"}")
 
 http_code=$(echo "$response" | tail -1)
 

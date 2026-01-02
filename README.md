@@ -29,4 +29,4 @@ Uses the Memos REST API (`/api/v1/memos`) to create private memos.
 ## Requirements
 
 - Alfred with Powerpack
-- `curl` and `python3` (included in macOS)
+- `curl` (included in macOS)
