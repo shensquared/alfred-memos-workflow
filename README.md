@@ -12,6 +12,8 @@ Quick memo creation for self-hosted [Memos](https://usememos.com) via Alfred.
 m your memo text here
 ```
 
+![Usage demo](usage.gif)
+
 ## Installation
 
 1. Download and double-click `Memos.alfredworkflow` to install
