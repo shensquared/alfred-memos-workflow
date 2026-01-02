@@ -1,0 +1,149 @@
+?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.shenshen.memos</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>0D5D7A3F-7E4C-4A8A-9B3E-8C6F1A2B3C4D</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E6E8B4G-8F5D-5B9B-0C4F-9D7G2B3C4D5E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoalicheck</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>shensquared</string>
+	<key>description</key>
+	<string>Quick memos via Bash</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Memos</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>m</string>
+				<key>subtext</key>
+				<string>Create a quick memo</string>
+				<key>text</key>
+				<string>Memo</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>0D5D7A3F-7E4C-4A8A-9B3E-8C6F1A2B3C4D</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./memo.sh "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1E6E8B4G-8F5D-5B9B-0C4F-9D7G2B3C4D5E</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Quick memo creation for self-hosted Memos (usememos.com)
+
+Usage: m &lt;your memo&gt;
+
+Configure MEMOS_TOKEN and MEMOS_URL in workflow variables.</string>
+	<key>uidata</key>
+	<dict>
+		<key>0D5D7A3F-7E4C-4A8A-9B3E-8C6F1A2B3C4D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>100</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+		<key>1E6E8B4G-8F5D-5B9B-0C4F-9D7G2B3C4D5E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>300</integer>
+			<key>ypos</key>
+			<integer>100</integer>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>Your Memos access token</string>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Access token from Memos Settings</string>
+			<key>label</key>
+			<string>MEMOS_TOKEN</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>MEMOS_TOKEN</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>http://localhost:5230</string>
+				<key>required</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>URL of your Memos instance</string>
+			<key>label</key>
+			<string>MEMOS_URL</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>MEMOS_URL</string>
+		</dict>
+	</array>
+	<key>version</key>
+	<string>1.0.0</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
